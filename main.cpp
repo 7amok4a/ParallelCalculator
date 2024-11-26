@@ -26,9 +26,6 @@ private:
         return result;
     }
 
-public:
-    ParallelCalculator(int r, int s) : rank(r), size(s) {}
-
     void readNumbers() {
         if (rank == 0) {
             int count;
@@ -167,6 +164,9 @@ public:
         }
     }
 
+public:
+
+    ParallelCalculator(int r, int s) : rank(r), size(s) {}
     void run() {
         readNumbers();
         
